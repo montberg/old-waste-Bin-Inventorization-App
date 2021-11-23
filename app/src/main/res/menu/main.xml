@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent">
+    <item
+        app:showAsAction="always"
+        android:icon="@drawable/logo"
+        android:title="">
+    </item>
+    <group>
+
+
+        <item
+            android:id="@+id/itemGoToMap"
+            app:showAsAction="always"
+            android:title="Карта">
+        </item>
+        <item
+            android:id="@+id/itemGoToList"
+            app:showAsAction="always"
+            android:title="Реестр">
+        </item>
+        <item
+            android:id="@+id/itemLogOut"
+            android:icon="@drawable/ic_menu_dots"
+            android:title="Меню"
+            app:showAsAction="always">
+        </item>
+    </group>
+
+</menu>

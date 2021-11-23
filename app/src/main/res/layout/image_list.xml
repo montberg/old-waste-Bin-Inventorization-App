@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="100dp"
+    android:layout_height="100dp"
+    android:elevation="5dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/imagerelativeLayout"
+    android:layout_marginHorizontal="5dp">
+    <com.google.android.material.imageview.ShapeableImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:id="@+id/image"
+        android:scaleType="centerInside"
+        app:strokeWidth="10dp"
+        app:strokeColor="@android:color/darker_gray"
+        android:layout_margin="10dp" />
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@drawable/deletebutton2"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:id="@+id/deleteButton"
+        android:src="@drawable/ic_action_deleteimage" />
+</RelativeLayout>

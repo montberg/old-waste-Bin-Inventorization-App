@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ctl"
+    tools:context=".PointProperties"
+    android:scrollbars="vertical"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:id="@+id/progressBar"
+                android:background="@drawable/deletebutton2"
+                android:elevation="30dp"
+                android:visibility="gone"
+                android:indeterminate="true" />
+    <RelativeLayout
+        android:id="@+id/relativeLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/relativeLayout3"
+    android:layout_marginHorizontal="10dp"
+    >
+        <AutoCompleteTextView
+            android:id="@+id/chooseAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/myrect4"
+            android:hint="Адрес"
+            android:imeActionLabel="Done"
+            android:imeOptions="actionDone"
+            android:inputType="text|textMultiLine"
+            android:textSize="8pt" />
+    <TableLayout
+        android:layout_width="match_parent"
+        android:id="@+id/table"
+        android:layout_below="@id/chooseAddress"
+        android:layout_height="wrap_content">
+        <TableRow>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Тип основания"
+        android:layout_weight="1"
+        android:id="@+id/tip"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Площадь"
+                android:id="@+id/ploshad"/>
+
+        </TableRow>
+        <TableRow>
+        <AutoCompleteTextView
+            android:id="@+id/autoTipOsnovania"
+            android:isScrollContainer="true"
+            android:background="@drawable/myrect4"
+            android:layout_weight="1"
+            android:completionThreshold="1"
+            android:layout_marginEnd="4dp"
+            android:textSize="8pt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Тип основания"
+            android:imeActionLabel="Done"
+            android:imeOptions="actionDone"/>
+        <EditText
+            android:id="@+id/txtPloshad"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="8pt"
+            android:hint="Площадь, м^2"
+            android:background="@drawable/myrect4"
+            android:inputType="numberDecimal"
+            />
+        </TableRow>
+    </TableLayout>
+        <CheckBox
+            android:id="@+id/checkUvelichitPloshad"
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+            android:layout_below="@id/table"
+            android:text="Возможность расширения" />
+
+        <CheckBox
+            android:id="@+id/checkSReconstrukcjei"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/checkUvelichitPloshad"
+            android:text="Необходима реконструкция"
+            android:visibility="gone" />
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/checkSReconstrukcjei"
+            android:id="@+id/checkNaves"
+            android:text="Наличие навеса"
+            />
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/checkNaves"
+            android:id="@+id/checkKGO"
+            android:text="Наличие места для складирования КГО"
+            />
+        <CheckBox
+            android:id="@+id/checkOgrazhdenie"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/checkKGO"
+            android:text="Наличие ограждения" />
+
+        <AutoCompleteTextView
+            android:id="@+id/autoOgrazhdenie"
+            android:layout_width="match_parent"
+            android:completionThreshold="1"
+            android:background="@drawable/myrect4"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/checkOgrazhdenie"
+            android:layout_marginVertical="5dp"
+            android:hint="Материал ограждения"
+            android:textSize="8pt"
+            android:visibility="gone" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/autoOgrazhdenie"
+        android:orientation="horizontal">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/lin"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        >
+        <AutoCompleteTextView
+            android:id="@+id/autoTipMusora"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginVertical="4dp"
+            android:background="@drawable/myrect4"
+            android:completionThreshold="1"
+            android:hint="Тип мусора"
+            android:textSize="8pt"
+            app:layout_constraintEnd_toStartOf="@+id/addContainer"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/autoObjemKonteinerov"
+            android:layout_width="match_parent"
+            android:layout_marginVertical="4dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/myrect4"
+            android:hint="Объем контейнеров, м^3"
+            android:inputType="numberDecimal"
+            android:textSize="8pt"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/addContainer"
+            app:layout_constraintStart_toStartOf="@+id/autoTipMusora" />
+    </LinearLayout>
+    <Button
+        android:id="@+id/addContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:background="@drawable/loginbutton"
+        android:text="Добавить контейнер"
+        android:textColor="@color/white"
+        android:textSize="7pt"/>
+    </LinearLayout>
+</RelativeLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Список контейнеров:"
+            android:layout_below="@id/relativeLayout3"
+            android:layout_marginHorizontal="6dp"
+            android:id="@+id/spisokkont"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/containerListView"
+            android:layout_marginVertical="6dp"
+            android:layout_marginHorizontal="6dp"
+            android:elevation="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@drawable/myrect5"
+            android:layout_below="@id/spisokkont"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="5dp"
+            android:elevation="5dp"
+            android:background="@drawable/loginbutton"
+            android:paddingHorizontal="10dp"
+            android:src="@drawable/ic_action_addphoto"
+            android:text="Добавить фото"
+            android:textColor="@color/white"
+            android:layout_alignParentEnd="true"
+            android:id="@+id/btnAddPhoto"
+            android:layout_below="@id/containerListView"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/picList"
+            android:layout_marginHorizontal="6dp"
+            android:id="@+id/photografii"
+            android:text="Фотографии" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/picList"
+            android:layout_width="match_parent"
+            android:elevation="5dp"
+            android:layout_height="100dp"
+            android:layout_marginHorizontal="6dp"
+            android:background="@drawable/myrect5"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@id/btnAddPhoto"
+            />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/relativeLayout2">
+            <Button
+                android:id="@+id/addPlatform"
+                android:layout_alignParentBottom="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginBottom="5dp"
+                android:textColor="@color/white"
+                android:background="@drawable/loginbutton"
+                android:text="Добавить площадку" />
+    </RelativeLayout>
+</RelativeLayout>
+</androidx.core.widget.NestedScrollView>

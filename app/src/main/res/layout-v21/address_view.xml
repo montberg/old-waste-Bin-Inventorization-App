@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:elevation="3dp"
+    android:gravity="center_vertical"
+    android:layout_height="wrap_content"
+    android:id="@+id/platform"
+    android:layout_marginVertical="1dp"
+    android:background="@drawable/myrect">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/address"
+        android:layout_marginVertical="5dp"
+        android:layout_marginHorizontal="10dp"
+        android:textColor="@color/black"
+        android:textSize="8pt"/>
+</RelativeLayout>

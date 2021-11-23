@@ -1,0 +1,8 @@
+i/jars/classes.jar
+i/jars/libs/antlr-runtime-3.4.jar
+i/jars/libs/connector-api-1.5.jar
+i/jars/libs/fscontext.jar
+i/jars/libs/jndi.jar
+i/jars/libs/log4j-core.jar
+i/jars/libs/providerutil.jar
+i/jars/libs/sql.jar
